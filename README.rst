@@ -116,3 +116,20 @@ Happy hacking with TruFont! :muscle:
 
 .. |Build Status| image:: https://travis-ci.org/trufont/trufont.svg?branch=master
    :target: https://travis-ci.org/trufont/trufont
+
+Using apt-get:
+
+    sudo apt-get install python3-pip virtualenv
+    sudo apt-get install python3-pyqt5
+
+setuptools is already installed
+
+Needed to run virtualenv as:
+
+    virtualenv -p /usr/bin/python3 --system-site-packages .venv
+
+This makes virtualenv complain that it is already using python3, but leaving
+the `-p` option out causes it to use python2.
+
+    pip3 install -r requirements.txt
+    pip3 install -e .
